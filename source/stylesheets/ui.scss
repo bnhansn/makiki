@@ -1,0 +1,44 @@
+.btn-loading {
+  position: relative;
+  cursor: default;
+  text-shadow: none !important;
+  color: transparent !important;
+  opacity: 1;
+  pointer-events: auto;
+  transition: all 0s linear, opacity 0.1s ease;
+}
+
+.btn-loading::before {
+  position: absolute;
+  content: '';
+  width: 16px;
+  height: 16px;
+  border-radius: 50%;
+  box-shadow: 0px 0px 0px 1px rgba(0,0,0,0.1), 1px 1px 0px rgba(0,0,0,.3);
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  margin-top: -8px;
+  margin-left: -8px;
+  animation: button-spin 0.5s linear infinite;
+}
+
+@keyframes button-spin {
+  from { transform: rotate(0deg) }
+  to { transform: rotate(360deg) }
+}
+
+.form-group { position: relative }
+
+.form-control.error,
+.field_with_errors .form-control { border-color: rgba(217,83,79,.8) !important }
+
+.error-icon {
+  position: absolute;
+  right: 15px;
+  bottom: 12px;
+  color: rgba(217,83,79,.8);
+}
+
+.hidden { display: none }
+

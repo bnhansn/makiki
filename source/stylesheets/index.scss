@@ -1,0 +1,142 @@
+.cover {
+  background-image: url("../images/honolulu-skyline-makiki.jpg");
+  background-position: center;
+  background-size: cover;
+  width: 100%;
+  height: 350px;
+  @media #{$lg-up} { height: 400px }
+}
+
+.address-bar {
+  background-color: $gray-light;
+  padding: 3rem 0 2rem;
+  color: $gray;
+  @media #{$lg-up} { padding: 2rem 0 }
+}
+
+.address-bar-container {
+  position: relative;
+  @media #{$lg-up} { padding-left: 405px }
+}
+
+.avatar {
+  position: absolute;
+  z-index: 2;
+  border: 3px solid white;
+  box-shadow: 0px 0px 8px 2px rgba(0,0,0,.2);
+  border-radius: 3px;
+  max-width: 300px;
+  top: -250px;
+  bottom: auto;
+  left: 50%;
+  transform: translateX(-50%);
+  @media #{$lg-up} {
+    max-width: 375px;
+    top: auto;
+    bottom: -60px;
+    left: 0;
+    transform: none;
+  }
+}
+
+.hawaii-islands { width: 100px }
+
+.historic-container {
+  margin: 2rem 0;
+  @media #{$md-up} { margin: 3rem 0 2rem }
+  @media #{$xl-up} { padding-left: 405px }
+}
+
+.historic-text {
+  font-family: "Great Vibes", cursive;
+  @media #{$lg-up} { font-size: 3rem }
+  @media #{$xl-up} { font-size: 3.5rem }
+}
+
+.expand-content {
+  position: relative;
+  height: 400px;
+  overflow-y: hidden;
+}
+
+.expand-content:not(.expanded)::before {
+  position: absolute;
+  content: '';
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  background: linear-gradient(to top, rgba(255,255,255,1), rgba(255,255,255,.3) 25%, rgba(255,255,255,0));
+}
+
+.expand-content.expanded { height: auto }
+
+.expand-button {
+  display: block;
+  width: 100%;
+  text-align: center;
+  background: white;
+  border: none;
+  border-top: 1px solid rgb(240,240,240);
+  padding: 1rem 0;
+  transition: background-color .2s, color .2s;
+  border-bottom-left-radius: $border-radius;
+  border-bottom-right-radius: $border-radius;
+}
+
+.expand-button:focus,
+.expand-button:hover { background-color: $gray-lightest }
+
+.home-tab {
+  width: 80%;
+  transition: .2s;
+  &:not(.active) { background-color: $gray-lighter }
+  &.active {
+    width: 100%;
+    padding: 1em 1em;
+  }
+}
+
+.photo-row,
+.arrow-holder {
+  position: relative;
+  width: 100%;
+  height: 300px;
+  @media #{$md-up} { height: 400px }
+}
+
+.photo-row {
+  overflow-x: scroll;
+  -webkit-overflow-scrolling: touch;
+  overflow-y: hidden;
+  white-space: nowrap;
+  img {
+    display: inline-block;
+    height: 315px;
+    @media #{$md-up} { height: 420px }
+  }
+}
+
+#right-click-area,
+#left-click-area {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  width: 60px;
+  transition: .2s;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: white;
+  font-size: 1.5rem;
+  &:hover,
+  &:focus {
+    background: linear-gradient(to top, transparent 0%, rgba(0,0,0,.3) 50%, transparent 100%);
+    color: white;
+    text-decoration: none;
+  }
+}
+
+#right-click-area { right: 0 }
+
+#left-click-area { left: 0 }
