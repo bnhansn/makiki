@@ -56,9 +56,6 @@ $xl-up: "only screen and (min-width : 1200px)";
 @import "vendor/bootstrap/utilities-spacing";
 @import "vendor/bootstrap/utilities-responsive";
 
-$fa-enable-utilities: false;
-@import "font-awesome";
-
 // Application
 @import "ui";
 @import "index";

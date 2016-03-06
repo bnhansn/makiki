@@ -93,7 +93,7 @@ header.address-bar
         .tab-pane#contact role="tabpanel"
           p Want to get more information from the property owner? Fill out the contact form and we will be in touch.
           = form_tag "https://techbient.com/api/messages", method: :post, class: "contact-form"
-            = hidden_field_tag :domain, value: "techbient.com"
+            = hidden_field_tag :domain, value: "2345makikiheights.com"
             .alert.alert-info.message-success.hidden role="alert"
               span Thank you, we have received your message
             .alert.alert-danger.message-error.hidden role="alert"
@@ -121,6 +121,6 @@ header.address-bar
     = image_tag "IMG_1337.jpg"
     = image_tag "IMG_1339.jpg"
   = link_to "#", id: "left-click-area", role: "button"
-    i.fa.fa-chevron-left
+    span &lsaquo;
   = link_to "#", id: "right-click-area", role: "button"
-    i.fa.fa-chevron-right
+    span &rsaquo;

@@ -1,9 +1,7 @@
 source 'https://rubygems.org'
 
-gem 'middleman', '~>3.4.1'
-gem 'middleman-livereload', '~> 3.3.0'
-gem 'middleman-deploy', '~> 1.0.0'
-gem 'middleman-autoprefixer', '~> 2.7.0'
+gem 'middleman', '~> 4.1.2', '>= 4.1.2'
 gem 'slim', '~> 3.0.6'
 gem 'middleman-favicon-maker', '~> 3.7'
-gem 'font-awesome-middleman', '~> 4.5'
+gem 'middleman-s3_sync', '~> 4.0', '>= 4.0.2'
+gem 'middleman-dotenv', '~> 2.0', '>= 2.0.0'
